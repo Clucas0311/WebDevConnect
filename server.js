@@ -5,6 +5,10 @@ const app = express();
 // Connect Database
 connectDB();
 
+//Init Middleware
+// How to use body parser in express for post request req.body
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => res.send('API Running'));
 
 //Define Route
